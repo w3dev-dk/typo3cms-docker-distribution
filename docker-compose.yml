@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  apache:
+    build: ./apache
+    ports:
+      - "80:80"
+    env_file:
+      - ./.env
+    depends_on:
+      - php-fpm
+    volumes:
+      - .:/var/www
+
+  php-fpm:
+    build: ./php-fpm
+    env_file:
+      - ./.env
+    depends_on:
+      - mariadb
+    volumes:
+      - .:/var/www
+
+  php-my-admin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - "8080:80"
+    env_file:
+      - ./.env
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.3
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./.env
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mariadb:/var/lib/mysql
+
+volumes:
+  mariadb:

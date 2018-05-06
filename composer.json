@@ -1,0 +1,51 @@
+{
+    "name": "w3dev/typo3cms-docker-distribution",
+    "description": "This is the source code for TYPO3 CMS & docker distribution package",
+    "license": "gpl2",
+    "type": "project",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Lasse Enoe Barslund",
+            "email": "lasse_enoe@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        { "type": "path", "url": "packages/*/" },
+        { "type": "composer", "url": "https://composer.typo3.org/" }
+    ],
+    "require": {
+        "roave/security-advisories": "dev-master",
+        "typo3/cms": "^8.7",
+        "helhum/typo3-console": "^4.6",
+        "dmitryd/typo3-realurl": "2.2.*",
+        "gridelementsteam/gridelements": "dev-master"
+    },
+    "scripts": {
+        "package-states": [
+            "@php vendor/helhum/typo3-console/Scripts/typo3cms install:generatepackagestates"
+        ],
+        "folder-structure": [
+            "@php vendor/helhum/typo3-console/Scripts/typo3cms install:fixfolderstructure"
+        ],
+        "ext-setup": [
+            "@php vendor/helhum/typo3-console/Scripts/typo3cms install:extensionsetupifpossible"
+        ],
+        "post-autoload-dump": [
+            "@package-states",
+            "@folder-structure",
+            "@ext-setup",
+            "/bin/bash fix-permissions.sh"
+        ]
+    },
+    "extra": {
+        "helhum/typo3-console": {
+            "install-extension-dummy": false
+        },
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "html"
+        }
+    }
+}
