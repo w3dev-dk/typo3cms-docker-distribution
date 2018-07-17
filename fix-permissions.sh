@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+echo "Fix user rights"
+chown -R www-data:www-data .
+
 echo "Fix directory permissions"
-find . -type d -exec chmod 2755 {} \;
+find . -type d -exec chmod 2770 {} \;
 
 echo "Fix file permissions"
-find . -type f -exec chmod 0644 {} \;
+find . -type f -exec chmod 0660 {} \;
 
 DIR_BIN=./vendor/bin
 if [ -d ${DIR_BIN} ]

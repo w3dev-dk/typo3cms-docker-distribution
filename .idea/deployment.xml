@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" createEmptyFolders="true" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;node_modules" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="svr01.w3dev.vm" preserveTimestamps="false" createEmptyFolders="true" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;node_modules" autoUploadExternalChanges="true">
     <serverData>
       <paths name="abdianalund@web02">
         <serverdata>
@@ -37,6 +37,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="bomiroskilde@web02">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="dancamps@web01">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="dpb@web02">
         <serverdata>
           <mappings>
@@ -45,6 +59,13 @@
         </serverdata>
       </paths>
       <paths name="envs@web02">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ferdinands@web02">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -114,6 +135,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="jessi@web02 (1)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="jydenworkwear@web02">
         <serverdata>
           <mappings>
@@ -122,6 +150,13 @@
         </serverdata>
       </paths>
       <paths name="korsoer@web01">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="krasilnikoff@web01">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -170,6 +205,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="minipigs@web02 (1)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="mitbaadmarked@web02">
         <serverdata>
           <mappings>
@@ -185,6 +227,13 @@
         </serverdata>
       </paths>
       <paths name="mrf@web02">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ridekort@web02">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -224,6 +273,10 @@
           <mappings>
             <mapping deploy="/typo3cms-docker-distribution" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath path="/typo3cms-docker-distribution/html" />
+            <excludedPath path="/typo3cms-docker-distribution/vendor" />
+          </excludedPaths>
         </serverdata>
       </paths>
       <paths name="teamjensen@web01">
