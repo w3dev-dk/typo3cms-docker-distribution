@@ -1,0 +1,9 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+    <f:render partial="GraphicalHeader" section="Bottom" contentAs="content">
+        <f:render partial="Layout/Header" arguments="{_all}" />
+        <f:cObject typoscriptObjectPath="lib.getContent" data="{colPos: 1}" />
+    </f:render>
+    <f:cObject typoscriptObjectPath="lib.getContent" data="{colPos: 0}" />
+</f:section>

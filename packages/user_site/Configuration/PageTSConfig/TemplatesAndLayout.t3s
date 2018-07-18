@@ -1,0 +1,35 @@
+RTE {
+    default {
+        preset = user_site_default
+    }
+}
+
+mod.web_layout.BackendLayouts {
+    default {
+        title = Default
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Indhold
+                                colPos = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+TCEMAIN.permissions {
+    groupid = 1
+
+    user = 31
+    group = 31
+    everybody = 0
+}

@@ -1,0 +1,3 @@
+page.includeCSS {
+    layout = {$plugin.tx_usersite.CSS.layout}
+}

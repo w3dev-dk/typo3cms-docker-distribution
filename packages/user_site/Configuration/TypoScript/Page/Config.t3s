@@ -1,0 +1,27 @@
+page = PAGE
+page.typeNum = 0
+
+page.config {
+    ##Language configuration
+    htmlTag_langKey = da-DK
+    language = da
+    locale_all = da_DK
+
+    ## CSS & JS include and configuration
+    removeDefaultJS = 1
+    compressJs = 1
+    concatenateJs = 1
+    compressCss = 1
+    concatenateCss = 1
+
+    ## Link configuration
+    spamProtectEmailAddresses = 0
+    absRefPrefix = {$plugin.tx_usersite.config.baseURL}
+    simulateStaticDocuments = 0
+    tx_realurl_enable = 1
+
+    ## Cache & header configuration
+    enableContentLengthHeader = 1
+    sendCacheHeaders = 0
+    cache_period = 0
+}

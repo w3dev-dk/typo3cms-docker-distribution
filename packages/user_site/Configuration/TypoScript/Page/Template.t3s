@@ -1,0 +1,84 @@
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
+            key.data = levelfield:-1, backend_layout_next_level, slide
+            key.override.field = backend_layout
+
+            pagets__default = TEXT
+            pagets__default.value = Default
+
+            default = TEXT
+            default.value = Default
+        }
+
+        templateRootPaths {
+            0 = EXT:user_site/Resources/Private/Templates/
+            10 = {$plugin.tx_usersite.view.templateRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:user_site/Resources/Private/Layouts/
+            10 = {$plugin.tx_usersite.view.layoutRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:user_site/Resources/Private/Partials/
+            10 = {$plugin.tx_usersite.view.partialRootPath}
+        }
+
+        extbase {
+            controllerExtensionName = UserSite
+        }
+
+        settings {
+            logo {
+                file = {$plugin.tx_usersite.logo.file}
+                maxWidth = {$plugin.tx_usersite.logo.width}
+            }
+            phoneNumber = {$plugin.tx_usersite.phoneNumber}
+            emailAddress = {$plugin.tx_usersite.emailAddress}
+        }
+
+        variables {
+            pageTitle = TEXT
+            pageTitle.data = page:title
+            siteTitle = TEXT
+            siteTitle.data = TSFE:tmpl|setup|sitetitle
+            rootPage = TEXT
+            rootPage.data = leveluid:0
+            logoAlt = COA
+            logoAlt {
+                10 = TEXT
+                10 {
+                    data = TSFE:tmpl|setup|sitetitle
+                    noTrimWrap = || logo|
+                    if.isFalse = {$plugin.tx_usersite.logo.alt}
+                }
+                20 = TEXT
+                20 {
+                    value = {$plugin.tx_usersite.logo.alt}
+                    noTrimWrap = | ||
+                    if.isTrue = {$plugin.tx_usersite.logo.alt}
+                }
+            }
+        }
+
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                entryLevel = 0
+                levels = 2
+                as = navItems
+                includeSpacer = 1
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                entryLevel = 1
+                levels = 2
+                as = subNavItems
+                includeSpacer = 1
+            }
+        }
+    }
+}

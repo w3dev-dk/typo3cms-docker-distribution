@@ -1,0 +1,9 @@
+lib.getContent < styles.content.get
+lib.getContent {
+    select {
+        pidInList = {field:pidInList}
+        pidInList.insertData = 1
+        where = colPos={field:colPos}
+        where.insertData = 1
+    }
+}

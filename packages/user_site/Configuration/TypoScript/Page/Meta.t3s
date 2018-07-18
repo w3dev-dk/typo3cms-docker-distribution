@@ -1,0 +1,37 @@
+page.meta {
+    keywords.field = keywords
+    description.field = description
+    author.cObject = COA
+    author.cObject {
+        10 = TEXT
+        10.field = author
+
+        20 = TEXT
+        20.field = author_email
+        20.noTrimWrap = | <|>|
+        20.required = 1
+    }
+
+    author.ifEmpty.cObject = COA
+    author.ifEmpty.cObject {
+        10 = TEXT
+        10.value =
+
+        20 = TEXT
+        20.value =
+        20.noTrimWrap = | <|>|
+    }
+
+    copyright =
+    robots = noindex
+    robots.if.isTrue.field = no_search
+    viewport = width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, user-scalable=no, maximum-scale=1.0
+}
+
+
+page.headerData {
+    101 = TEXT
+    101.data = page:SYS_LASTCHANGED
+    101.date = c
+    101.wrap = <meta name="Last-Modified" content = "|" />
+}

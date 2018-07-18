@@ -1,0 +1,10 @@
+HEADER
+
+<f:link.page pageUid="{rootPage}">
+    <img alt="{logoAlt}" src="{f:uri.image(
+        src: settings.logo.file,
+        maxWidth: settings.logo.maxWidth
+    )}" />
+</f:link.page>
+
+{navItems -> f:debug(inline: 1)}

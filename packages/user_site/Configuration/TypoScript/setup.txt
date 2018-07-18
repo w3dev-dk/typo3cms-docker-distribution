@@ -1,0 +1,26 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_site/Configuration/TypoScript/Page/Config.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_site/Configuration/TypoScript/Page/Meta.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_site/Configuration/TypoScript/Page/Resources.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_site/Configuration/TypoScript/Page/Template.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_site/Configuration/TypoScript/Lib/GetContent.t3s">
+
+plugin.tx_usersite {
+    view {
+        templateRootPaths {
+            0 = EXT:user_site/Resources/Private/Templates
+            10 = {$plugin.tx_usersite.view.templateRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:user_site/Resources/Private/Layouts
+            10 = {$plugin.tx_usersite.view.layoutRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:user_site/Resources/Private/Partials
+            10 = {$plugin.tx_usersite.view.partialRootPath}
+        }
+    }
+
+    settings {
+
+    }
+}

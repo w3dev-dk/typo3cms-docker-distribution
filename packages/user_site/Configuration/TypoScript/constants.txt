@@ -1,0 +1,20 @@
+plugin.tx_usersite {
+    config {
+        baseURL = /
+    }
+
+    CSS {
+        layout = EXT:user_site/Resources/Public/Stylesheets/layout.min.css
+    }
+
+    view {
+        templateRootPath = EXT:user_site/Resources/Private/Templates/
+        layoutRootPath = EXT:user_site/Resources/Private/Layouts/
+        partialRootPath = EXT:user_site/Resources/Private/Partials/
+    }
+
+    logo {
+        file = EXT:user_site/Resources/Public/Images/logo.png
+        width = 18
+    }
+}
